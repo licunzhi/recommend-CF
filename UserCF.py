@@ -121,7 +121,7 @@ def GetRecommendation(user, train ,W, N, K):
     rank = dict()
     interacted_items = train[user]
     #选取K个近邻计算得分
-    for v,wuv in sorted(W[user].items(), key=itemgetter(1),\
+    for v,wuv in sorted(W[user].items(), key=itemgetter(1),
         reverse = True)[0:K]:
         for i in train[v]:
             if i in interacted_items:
